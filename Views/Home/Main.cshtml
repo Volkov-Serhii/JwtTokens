@@ -1,0 +1,29 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CodeMag JWT Demo</title>
+</head>
+
+<body>
+    @{
+        ViewBag.Title = "Demonstrating JWTs in ASP.NET Core MVC 5";
+    }
+
+    <p>You're logged in as:&nbsp;@User.Identity.Name</p>
+    <p>@ViewBag.Message</p>
+    <h3>Users</h3>
+    <table>
+        <tr>
+            <td><p>Name</p></td>
+            <td><p>Login</p></td>
+        </tr>
+        @foreach (var b in ViewBag.Accounts)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Email</p></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
